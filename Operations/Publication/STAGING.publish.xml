@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseName>WiredAuth_STG</TargetDatabaseName>
+    <DeployScriptFileName>WireScience.Data.Database.Auth.sql</DeployScriptFileName>
+    <TargetConnectionString>Data Source=eec-sql1.eec.local;Persist Security Info=False;User ID=WireScience;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False</TargetConnectionString>
+    <BlockOnPossibleDataLoss>True</BlockOnPossibleDataLoss>
+    <BackupDatabaseBeforeChanges>True</BackupDatabaseBeforeChanges>
+    <ProfileVersionNumber>1</ProfileVersionNumber>
+  </PropertyGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="AuthDatabase">
+      <Value>WiredAuth_STG</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="PopulateReferenceData">
+      <Value>FALSE</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="SchemaVersion">
+      <Value>1.0.0</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+</Project>
