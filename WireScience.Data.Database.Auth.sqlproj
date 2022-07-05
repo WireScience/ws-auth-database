@@ -107,6 +107,8 @@
     <None Include="Operations\Versioning\DbVersionBlaster.exe.config" />
     <None Include="Operations\Publication\STAGING.publish.xml" />
     <None Include="Operations\Comparison\STAGING.scmp" />
+    <None Include="Operations\Publication\PRODUCTION.publish.xml" />
+    <None Include="Operations\Comparison\PRODUCTION.scmp" />
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="AuthDatabase">
