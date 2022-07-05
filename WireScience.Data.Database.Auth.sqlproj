@@ -68,6 +68,10 @@
     <Folder Include="Operations\Comparison" />
     <Folder Include="Operations\Publication" />
     <Folder Include="Operations\Versioning\" />
+    <Folder Include="PostDeployment\" />
+    <Folder Include="PostDeployment\dbo\" />
+    <Folder Include="Utility\" />
+    <Folder Include="Utility\Functions\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\__EFMigrationsHistory.sql" />
@@ -79,6 +83,13 @@
     <Build Include="dbo\Tables\AspNetUserTokens.sql" />
     <Build Include="dbo\Tables\AspNetUsers.sql" />
     <Build Include="Security\Permissions.sql" />
+    <None Include="PostDeployment\DeploymentFooter.sql" />
+    <PostDeploy Include="PostDeployment\PostDeployment.sql" />
+    <None Include="PostDeployment\dbo\EFMigrationHistory.sql" />
+    <Build Include="Utility\Functions\TableRowCount.sql">
+      <SuppressTSqlWarnings>71502</SuppressTSqlWarnings>
+    </Build>
+    <Build Include="Utility\Utility.sql" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -96,6 +107,10 @@
     <SqlCmdVariable Include="AuthDatabase">
       <DefaultValue>ws-auth-database</DefaultValue>
       <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="PopulateReferenceData">
+      <DefaultValue>FALSE</DefaultValue>
+      <Value>$(SqlCmdVar__3)</Value>
     </SqlCmdVariable>
     <SqlCmdVariable Include="SchemaVersion">
       <DefaultValue>1.0.0</DefaultValue>
