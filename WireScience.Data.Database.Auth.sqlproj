@@ -72,6 +72,7 @@
     <Folder Include="PostDeployment\dbo\" />
     <Folder Include="Utility\" />
     <Folder Include="Utility\Functions\" />
+    <Folder Include="PreDeployment\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\__EFMigrationsHistory.sql" />
@@ -90,6 +91,8 @@
       <SuppressTSqlWarnings>71502</SuppressTSqlWarnings>
     </Build>
     <Build Include="Utility\Utility.sql" />
+    <PreDeploy Include="PreDeployment\PreDeployment.sql" />
+    <None Include="PreDeployment\DeploymentHeader.sql" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
