@@ -25,6 +25,7 @@
     <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
     <DefaultFilegroup>PRIMARY</DefaultFilegroup>
     <DacApplicationName>WireScience.Data.Databasel.Auth</DacApplicationName>
+    <DacVersion>1.0.0</DacVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -66,6 +67,7 @@
     <Folder Include="Operations" />
     <Folder Include="Operations\Comparison" />
     <Folder Include="Operations\Publication" />
+    <Folder Include="Operations\Versioning\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\__EFMigrationsHistory.sql" />
@@ -87,5 +89,20 @@
   <ItemGroup>
     <None Include="Operations\Comparison\LOCAL.scmp" />
     <None Include="Operations\Publication\LOCAL.publish.xml" />
+    <None Include="Operations\Versioning\DbVersionBlaster.exe" />
+    <None Include="Operations\Versioning\DbVersionBlaster.exe.config" />
   </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="AuthDatabase">
+      <DefaultValue>ws-auth-database</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="SchemaVersion">
+      <DefaultValue>1.0.0</DefaultValue>
+      <Value>$(SqlCmdVar__2)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <PropertyGroup>
+    <PreBuildEvent>$(ProjectDir)Operations\Versioning\DbVersionBlaster -project $(ProjectDir)</PreBuildEvent>
+  </PropertyGroup>
 </Project>

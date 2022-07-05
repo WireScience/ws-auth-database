@@ -9,4 +9,12 @@
     <BackupDatabaseBeforeChanges>True</BackupDatabaseBeforeChanges>
     <ProfileVersionNumber>1</ProfileVersionNumber>
   </PropertyGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="AuthDatabase">
+      <Value>WiredAuth</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="SchemaVersion">
+      <Value>1.0.0</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
 </Project>
