@@ -73,6 +73,7 @@
     <Folder Include="Utility\" />
     <Folder Include="Utility\Functions\" />
     <Folder Include="PreDeployment\" />
+    <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\__EFMigrationsHistory.sql" />
@@ -93,6 +94,7 @@
     <Build Include="Utility\Utility.sql" />
     <PreDeploy Include="PreDeployment\PreDeployment.sql" />
     <None Include="PreDeployment\DeploymentHeader.sql" />
+    <Build Include="dbo\Stored Procedures\User_ConfirmEmail.sql" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
